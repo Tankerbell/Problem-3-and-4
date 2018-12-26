@@ -13,8 +13,6 @@ while n > 1:
 
 print(answer)
 
-print(answer)
-
 # Problem 4 (Largest Palindrome)
 n = 3
 integers = range(10 ** (n - 1), 10 ** n)
@@ -40,4 +38,3 @@ for c in products:
       break
 
 print(answer)
-
