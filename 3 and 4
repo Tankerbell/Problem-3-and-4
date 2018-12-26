@@ -1,0 +1,43 @@
+# Problem 3 (Largest Prime Factor)
+n = 600851475143
+b = 1
+while n > 1:
+  if n % (n - b) != 0:
+    if (n - b) == 2:
+      answer = n
+      break
+    else:
+      b += 1
+  else:
+    b = 0
+    n -= 1
+
+print(answer)
+
+# Problem 4 (Largest Palindrome)
+n = 3
+integers = range(10 ** (n - 1), 10 ** n)
+products = []
+for a in integers:
+  for b in integers:
+    if a * b not in products:
+      products.append(a * b)
+products.sort(reverse = true)
+
+for c in products:
+  x = 0
+  y = 1
+  z = len(str(c))
+  while True:
+    if str(c)[x] == str(c)[z - y]:
+      if x >= (z - y):
+        answer = c
+        break
+      else:
+        x += 1
+        y += 1
+    else:
+      break
+
+print(answer)
+
